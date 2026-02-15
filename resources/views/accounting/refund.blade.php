@@ -12,13 +12,13 @@
                 <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
                 </svg>
-                New Entry
+                New Refund Request
             </button>
         </div>
         
         <div class="bg-gray-50 rounded-lg p-6">
             <p class="text-gray-600 text-center py-8">Content for {{ $title }} will be displayed here.</p>
-            <p class="text-sm text-gray-500 text-center">This module is part of the comprehensive office management system.</p>
+            <p class="text-sm text-gray-500 text-center">This module includes: Refund request management, approval workflows, and tracking.</p>
         </div>
     </div>
 </div>

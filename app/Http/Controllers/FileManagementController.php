@@ -8,52 +8,17 @@ class FileManagementController extends Controller
 {
     public function digital()
     {
-        return view('files.digital', ['title' => 'Digital File System']);
+        return view('files.digital', ['title' => 'Digital File']);
     }
     
     public function physical()
     {
-        return view('files.physical', ['title' => 'Physical Rack Management']);
+        return view('files.physical', ['title' => 'Physical Rack']);
     }
     
-    public function accessRequest()
+    public function myFiles()
     {
-        return view('files.access-request', ['title' => 'Access Request Workflow']);
-    }
-    
-    public function assignments()
-    {
-        return view('files.assignments', ['title' => 'User-Specific Assignments']);
-    }
-    
-    public function search()
-    {
-        return view('files.search', ['title' => 'Advanced Search & Filtering']);
-    }
-    
-    public function version()
-    {
-        return view('files.version', ['title' => 'Version Control & History']);
-    }
-    
-    public function movement()
-    {
-        return view('files.movement', ['title' => 'File Movement Tracking']);
-    }
-    
-    public function audit()
-    {
-        return view('files.audit', ['title' => 'Complete Audit Trail']);
-    }
-    
-    public function bulk()
-    {
-        return view('files.bulk', ['title' => 'Bulk Operations']);
-    }
-    
-    public function confidentiality()
-    {
-        return view('files.confidentiality', ['title' => 'Confidentiality Levels']);
+        return view('files.my-files', ['title' => 'My Files']);
     }
 }
 

@@ -46,15 +46,8 @@
                         </a>
                         <div id="accounting-menu" class="sidebar-submenu ml-4 mt-1">
                             <a href="{{ route('accounting.petty-cash') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Petty Cash Management</a>
-                            <a href="{{ route('accounting.imprest') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Imprest Request & Retirement</a>
-                            <a href="{{ route('accounting.chart-of-accounts') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Chart of Accounts</a>
-                            <a href="{{ route('accounting.journal') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Journal Entries & Ledger</a>
-                            <a href="{{ route('accounting.payable-receivable') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Accounts Payable & Receivable</a>
-                            <a href="{{ route('accounting.budget') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Budget Planning & Forecasting</a>
-                            <a href="{{ route('accounting.reports') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Financial Reports</a>
-                            <a href="{{ route('accounting.cash-flow') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Cash Flow & Reconciliation</a>
-                            <a href="{{ route('accounting.tax') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Tax & PAYE Management</a>
-                            <a href="{{ route('accounting.assets') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Fixed Assets & Depreciation</a>
+                            <a href="{{ route('accounting.imprest') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Imprest Management</a>
+                            <a href="{{ route('accounting.refund') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Refund Management</a>
                         </div>
                     </div>
                     
@@ -72,16 +65,9 @@
                             </svg>
                         </a>
                         <div id="file-menu" class="sidebar-submenu ml-4 mt-1">
-                            <a href="{{ route('files.digital') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Digital File System</a>
-                            <a href="{{ route('files.physical') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Physical Rack Management</a>
-                            <a href="{{ route('files.access-request') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Access Request Workflow</a>
-                            <a href="{{ route('files.assignments') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">User-Specific Assignments</a>
-                            <a href="{{ route('files.search') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Advanced Search & Filtering</a>
-                            <a href="{{ route('files.version') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Version Control & History</a>
-                            <a href="{{ route('files.movement') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">File Movement Tracking</a>
-                            <a href="{{ route('files.audit') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Complete Audit Trail</a>
-                            <a href="{{ route('files.bulk') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Bulk Operations</a>
-                            <a href="{{ route('files.confidentiality') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Confidentiality Levels</a>
+                            <a href="{{ route('files.digital') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Digital File</a>
+                            <a href="{{ route('files.physical') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Physical Rack</a>
+                            <a href="{{ route('files.my-files') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">My Files</a>
                         </div>
                     </div>
                     
@@ -126,17 +112,15 @@
                             </svg>
                         </a>
                         <div id="hr-menu" class="sidebar-submenu ml-4 mt-1">
-                            <a href="{{ route('hr.employees') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Employee Registration & Profiles</a>
+                            <a href="{{ route('hr.personal-particulars') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Personal Particulars</a>
                             <a href="{{ route('hr.leave') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Leave Management</a>
-                            <a href="{{ route('hr.permission') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Permission Requests</a>
+                            <a href="{{ route('hr.permission') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Permission Management</a>
                             <a href="{{ route('hr.sick-sheet') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Sick Sheet Management</a>
                             <a href="{{ route('hr.performance') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Performance Assessments</a>
                             <a href="{{ route('hr.payroll') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Payroll Processing</a>
                             <a href="{{ route('hr.recruitment') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Recruitment Management</a>
                             <a href="{{ route('hr.departments') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Department & Position Management</a>
                             <a href="{{ route('hr.attendance') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Attendance Tracking</a>
-                            <a href="{{ route('hr.documents') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Document Management</a>
-                            <a href="{{ route('hr.communication') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Bulk SMS & Email</a>
                         </div>
                     </div>
                     
@@ -267,7 +251,7 @@
                         </button>
                         <div class="hidden md:flex flex-col">
                             <h1 class="text-lg lg:text-xl font-extrabold text-gray-900 leading-tight">Office Management System</h1>
-                            <p class="text-xs font-bold text-gray-600 hidden lg:block">Comprehensive Office Solution</p>
+                            <p class="text-xs font-extrabold text-gray-700 hidden lg:block">Comprehensive Office Solution</p>
                         </div>
                     </div>
                     

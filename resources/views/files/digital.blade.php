@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $title . ' - OfisiLink')
+@section('title', $title . ' - Office Management')
 @section('page-title', $title)
 
 @section('content')
