@@ -5,227 +5,240 @@
 
 @section('content')
 <div class="space-y-6">
+    <!-- Breadcrumb -->
+    <div class="flex items-center space-x-2 text-sm text-gray-600">
+        <a href="{{ route('dashboard') }}" class="hover:text-[#940000]">Dashboard</a>
+        <span>/</span>
+        <a href="#" class="hover:text-[#940000]">Human Resources</a>
+        <span>/</span>
+        <span class="text-gray-900 font-medium">Employee Profile</span>
+    </div>
+
     <!-- Employee Profile Header -->
-    <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-        <div class="bg-gradient-to-r from-[#940000] to-[#7a0000] p-6">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between">
-                <div class="flex items-center space-x-4 mb-4 md:mb-0">
-                    <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center text-[#940000] text-2xl font-bold border-4 border-white shadow-lg">
-                        JD
+    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+        <div class="bg-gradient-to-br from-[#940000] via-[#800000] to-[#600000] p-8 relative overflow-hidden">
+            <!-- Decorative background elements -->
+            <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-20 -mt-20 blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-48 h-48 bg-black/10 rounded-full -ml-10 -mb-10 blur-2xl"></div>
+            
+            <div class="flex flex-col md:flex-row md:items-center relative z-10">
+                <div class="flex items-center space-x-6 mb-6 md:mb-0">
+                    <div class="relative">
+                        <div class="w-32 h-32 rounded-3xl bg-white p-1 shadow-2xl rotate-3 transform transition-transform hover:rotate-0 duration-500">
+                            <div class="w-full h-full rounded-2xl bg-gray-100 flex items-center justify-center text-[#940000] text-4xl font-black">
+                                JD
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 border-4 border-white rounded-full shadow-lg" title="Active Employee"></div>
                     </div>
                     <div>
-                        <h2 class="text-2xl font-bold text-white">John Doe</h2>
-                        <p class="text-red-100">Employee ID: EMP-001 | Finance Department</p>
-                        <p class="text-red-100 text-sm">Senior Accountant</p>
+                        <div class="flex items-center space-x-3">
+                            <h2 class="text-3xl font-black text-white tracking-tight">John Doe</h2>
+                            <span class="px-2 py-0.5 bg-white/20 text-white text-[10px] font-black uppercase tracking-widest rounded-full backdrop-blur-md">Full-Time</span>
+                        </div>
+                        <p class="text-red-100 font-medium mt-1">Senior Accountant | Finance Department</p>
+                        <div class="flex items-center space-x-4 mt-4">
+                            <div class="flex items-center text-red-100 text-sm">
+                                <svg class="w-4 h-4 mr-1.5 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                john.doe@ofisilink.com
+                            </div>
+                            <div class="flex items-center text-red-100 text-sm">
+                                <svg class="w-4 h-4 mr-1.5 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 014 0"></path>
+                                </svg>
+                                EMP-001
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="flex items-center space-x-3">
-                    <button class="px-4 py-2 bg-white text-[#940000] rounded-lg text-sm font-medium hover:bg-gray-100 transition-colors flex items-center">
+                <div class="flex items-center md:ml-auto space-x-3">
+                    <button class="px-5 py-2.5 bg-white text-[#940000] rounded-xl text-sm font-black shadow-lg hover:bg-gray-50 transition-all transform hover:-translate-y-1 active:translate-y-0 flex items-center">
                         <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
                         </svg>
-                        Edit Details
-                    </button>
-                    <button class="px-4 py-2 bg-white text-[#940000] rounded-lg text-sm font-medium hover:bg-gray-100 transition-colors flex items-center">
-                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                        </svg>
-                        Export
+                        Edit Profile
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- Tabs -->
-        <div class="border-b border-gray-200">
-            <nav class="flex -mb-px" role="tablist">
-                <button type="button" role="tab" data-tab="personal" class="px-6 py-4 text-sm font-medium text-[#940000] border-b-2 border-[#940000]">Personal Information</button>
-                <button type="button" role="tab" data-tab="contact" class="px-6 py-4 text-sm font-medium text-gray-600 hover:text-gray-800">Contact Details</button>
-                <button type="button" role="tab" data-tab="employment" class="px-6 py-4 text-sm font-medium text-gray-600 hover:text-gray-800">Employment Details</button>
-                <button type="button" role="tab" data-tab="emergency" class="px-6 py-4 text-sm font-medium text-gray-600 hover:text-gray-800">Emergency Contacts</button>
-                <button type="button" role="tab" data-tab="documents" class="px-6 py-4 text-sm font-medium text-gray-600 hover:text-gray-800">Documents</button>
+        <!-- Navigation Tabs -->
+        <div class="border-b border-gray-100 bg-gray-50/50">
+            <nav class="flex px-8" role="tablist">
+                <button type="button" role="tab" data-tab="personal" class="px-6 py-4 text-sm font-black uppercase tracking-widest text-[#940000] border-b-4 border-[#940000] transition-all">Overview</button>
+                <button type="button" role="tab" data-tab="contact" class="px-6 py-4 text-sm font-bold uppercase tracking-widest text-gray-400 hover:text-gray-600 transition-all">Contact Info</button>
+                <button type="button" role="tab" data-tab="employment" class="px-6 py-4 text-sm font-bold uppercase tracking-widest text-gray-400 hover:text-gray-600 transition-all">Work Details</button>
+                <button type="button" role="tab" data-tab="emergency" class="px-6 py-4 text-sm font-bold uppercase tracking-widest text-gray-400 hover:text-gray-600 transition-all">Security</button>
+                <button type="button" role="tab" data-tab="documents" class="px-6 py-4 text-sm font-bold uppercase tracking-widest text-gray-400 hover:text-gray-600 transition-all">Vault</button>
             </nav>
         </div>
 
-        <!-- Personal Information Content -->
-        <div class="p-6" data-tab-content="personal">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                    <p class="text-gray-900 font-semibold">John Doe</p>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Date of Birth</label>
-                    <p class="text-gray-900 font-semibold">January 15, 1990</p>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Gender</label>
-                    <p class="text-gray-900 font-semibold">Male</p>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Nationality</label>
-                    <p class="text-gray-900 font-semibold">Tanzanian</p>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Marital Status</label>
-                    <p class="text-gray-900 font-semibold">Married</p>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">National ID Number</label>
-                    <p class="text-gray-900 font-semibold">12345678901</p>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Tax ID Number</label>
-                    <p class="text-gray-900 font-semibold">TAX-123456</p>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Blood Group</label>
-                    <p class="text-gray-900 font-semibold">O+</p>
-                </div>
-            </div>
-        </div>
+        <div class="p-8">
+            <!-- Personal Information Content -->
+            <div data-tab-content="personal">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2 space-y-8">
+                        <div>
+                            <h3 class="text-xs font-black text-gray-400 uppercase tracking-[0.2em] mb-4">Bio Data</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12">
+                                <div class="group">
+                                    <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1 group-hover:text-[#940000] transition-colors">Date of Birth</label>
+                                    <p class="text-sm font-bold text-gray-900">January 15, 1990 (35 Years)</p>
+                                </div>
+                                <div class="group">
+                                    <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1 group-hover:text-[#940000] transition-colors">Nationality</label>
+                                    <p class="text-sm font-bold text-gray-900">Tanzanian</p>
+                                </div>
+                                <div class="group">
+                                    <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1 group-hover:text-[#940000] transition-colors">NIN / National ID</label>
+                                    <p class="text-sm font-bold text-gray-900 font-mono">19900115-12345-00001-22</p>
+                                </div>
+                                <div class="group">
+                                    <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1 group-hover:text-[#940000] transition-colors">Marital Status</label>
+                                    <p class="text-sm font-bold text-gray-900">Married</p>
+                                </div>
+                            </div>
+                        </div>
 
-        <!-- Contact Details Content -->
-        <div class="p-6 hidden" data-tab-content="contact">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                    <p class="text-gray-900 font-semibold">john.doe@company.com</p>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                    <p class="text-gray-900 font-semibold">+234 123 456 7890</p>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Alternate Phone</label>
-                    <p class="text-gray-900 font-semibold">+234 987 654 3210</p>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Address</label>
-                    <p class="text-gray-900 font-semibold">123 Main Street, Lagos</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Employment Details Content -->
-        <div class="p-6 hidden" data-tab-content="employment">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Employee ID</label>
-                    <p class="text-gray-900 font-semibold">EMP-001</p>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Department</label>
-                    <p class="text-gray-900 font-semibold">Finance</p>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Position</label>
-                    <p class="text-gray-900 font-semibold">Senior Accountant</p>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Date of Joining</label>
-                    <p class="text-gray-900 font-semibold">January 15, 2020</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Emergency Contacts Content -->
-        <div class="p-6 hidden" data-tab-content="emergency">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Emergency Contact Name</label>
-                    <p class="text-gray-900 font-semibold">Jane Doe</p>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Relationship</label>
-                    <p class="text-gray-900 font-semibold">Spouse</p>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Emergency Phone</label>
-                    <p class="text-gray-900 font-semibold">+234 111 222 3333</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Documents Content -->
-        <div class="p-6 hidden" data-tab-content="documents">
-            <div class="space-y-4">
-                <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
-                    <div>
-                        <p class="text-sm font-semibold text-gray-900">Resume</p>
-                        <p class="text-xs text-gray-600">Uploaded on Jan 15, 2020</p>
+                        <div>
+                            <h3 class="text-xs font-black text-gray-400 uppercase tracking-[0.2em] mb-4">Identification & Tax</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12">
+                                <div class="group">
+                                    <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1 group-hover:text-[#940000] transition-colors">TIN Number</label>
+                                    <p class="text-sm font-bold text-gray-900 font-mono">123-456-789</p>
+                                </div>
+                                <div class="group">
+                                    <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1 group-hover:text-[#940000] transition-colors">NSSF Number</label>
+                                    <p class="text-sm font-bold text-gray-900 font-mono">NSSF/2020/9988</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <button class="px-3 py-1.5 text-[#940000] border border-[#940000] rounded text-sm font-medium hover:bg-[#940000] hover:text-white transition-colors">
-                        Download
-                    </button>
-                </div>
-                <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
-                    <div>
-                        <p class="text-sm font-semibold text-gray-900">ID Card Copy</p>
-                        <p class="text-xs text-gray-600">Uploaded on Jan 15, 2020</p>
+
+                    <div class="space-y-6">
+                        <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+                            <h4 class="text-xs font-black text-gray-400 uppercase tracking-widest mb-4">Internal Stats</h4>
+                            <div class="space-y-4">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-xs font-bold text-gray-500">Service Duration</span>
+                                    <span class="text-xs font-black text-[#940000]">5.2 Years</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-xs font-bold text-gray-500">Attendance Rate</span>
+                                    <span class="text-xs font-black text-green-600">98.4%</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-xs font-bold text-gray-500">Late Arrivals</span>
+                                    <span class="text-xs font-black text-orange-500">2 (YTD)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-red-50 rounded-2xl p-6 border border-red-100">
+                            <h4 class="text-xs font-black text-[#940000] uppercase tracking-widest mb-2">Next Review</h4>
+                            <p class="text-lg font-black text-gray-900">March 15, 2025</p>
+                            <p class="text-[10px] text-[#940000] font-bold mt-1 uppercase tracking-tighter">Annual Performance Cycle</p>
+                        </div>
                     </div>
-                    <button class="px-3 py-1.5 text-[#940000] border border-[#940000] rounded text-sm font-medium hover:bg-[#940000] hover:text-white transition-colors">
-                        Download
-                    </button>
                 </div>
+            </div>
+
+            <!-- Other tabs follow same structure (hidden by default) -->
+            <div data-tab-content="contact" class="hidden">
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Personal Email</label>
+                        <p class="text-sm font-bold text-gray-900">john.doe.personal@gmail.com</p>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Work Phone</label>
+                        <p class="text-sm font-bold text-gray-900">+255 754 123 456</p>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Residential Address</label>
+                        <p class="text-sm font-bold text-gray-900">Plot 45, Masaki, Dar es Salaam</p>
+                    </div>
+                 </div>
+            </div>
+            
+            <div data-tab-content="employment" class="hidden">
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Date of Joining</label>
+                        <p class="text-sm font-bold text-gray-900">January 15, 2020</p>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Provisional Period</label>
+                        <p class="text-sm font-bold text-green-600">PASSED (Apr 2020)</p>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Reporting Manager</label>
+                        <p class="text-sm font-bold text-gray-900">Sarah Johnson (Director of Finance)</p>
+                    </div>
+                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Quick Stats -->
+    <!-- Bottom Quick Metrics -->
     <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-        <div class="bg-white rounded-lg shadow-sm p-6 border border-gray-200">
-            <div class="flex items-center justify-between">
-                <div>
-                    <p class="text-sm text-gray-600 mb-1">Years of Service</p>
-                    <p class="text-2xl font-bold text-[#940000]">5.2</p>
-                </div>
-                <div class="w-12 h-12 rounded-lg bg-red-100 flex items-center justify-center">
-                    <svg class="w-6 h-6 text-[#940000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                </div>
+        <div class="bg-white rounded-2xl shadow-sm p-6 border border-gray-100 hover:shadow-md transition-all">
+            <p class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-2">Leave Available</p>
+            <div class="flex items-end justify-between">
+                <p class="text-2xl font-black text-blue-600">18 Days</p>
+                <span class="text-[10px] font-bold text-gray-400 pb-1">Annual Balance</span>
             </div>
         </div>
-        <div class="bg-white rounded-lg shadow-sm p-6 border border-gray-200">
-            <div class="flex items-center justify-between">
-                <div>
-                    <p class="text-sm text-gray-600 mb-1">Leave Balance</p>
-                    <p class="text-2xl font-bold text-blue-600">18 days</p>
-                </div>
-                <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center">
-                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                    </svg>
-                </div>
+        <div class="bg-white rounded-2xl shadow-sm p-6 border border-gray-100 hover:shadow-md transition-all">
+            <p class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-2">Benefit Tier</p>
+            <div class="flex items-end justify-between">
+                <p class="text-2xl font-black text-purple-600">Tier III</p>
+                <span class="text-[10px] font-bold text-gray-400 pb-1">Senior Level</span>
             </div>
         </div>
-        <div class="bg-white rounded-lg shadow-sm p-6 border border-gray-200">
-            <div class="flex items-center justify-between">
-                <div>
-                    <p class="text-sm text-gray-600 mb-1">Attendance Rate</p>
-                    <p class="text-2xl font-bold text-green-600">96%</p>
-                </div>
-                <div class="w-12 h-12 rounded-lg bg-green-100 flex items-center justify-center">
-                    <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                </div>
+        <div class="bg-white rounded-2xl shadow-sm p-6 border border-gray-100 hover:shadow-md transition-all">
+            <p class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-2">Performance</p>
+            <div class="flex items-end justify-between">
+                <p class="text-2xl font-black text-yellow-600">4.8 / 5.0</p>
+                <span class="text-[10px] font-bold text-gray-400 pb-1">LTM Score</span>
             </div>
         </div>
-        <div class="bg-white rounded-lg shadow-sm p-6 border border-gray-200">
-            <div class="flex items-center justify-between">
-                <div>
-                    <p class="text-sm text-gray-600 mb-1">Performance Score</p>
-                    <p class="text-2xl font-bold text-yellow-600">4.5/5</p>
-                </div>
-                <div class="w-12 h-12 rounded-lg bg-yellow-100 flex items-center justify-center">
-                    <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
-                    </svg>
-                </div>
-            </div>
+        <div class="bg-white rounded-2xl shadow-sm p-6 border border-gray-100 hover:shadow-md transition-all text-center flex items-center justify-center">
+             <button class="w-full h-full py-2 bg-gray-50 border border-gray-100 rounded-xl text-xs font-black uppercase text-gray-500 hover:bg-[#940000] hover:text-white transition-all">
+                 Generate Org Chart
+             </button>
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tabs = document.querySelectorAll('[role="tab"]');
+        const contents = document.querySelectorAll('[data-tab-content]');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.getAttribute('data-tab');
+
+                // Update tab styles
+                tabs.forEach(t => {
+                    t.classList.remove('text-[#940000]', 'border-[#940000]', 'border-b-4');
+                    t.classList.add('text-gray-400');
+                });
+                tab.classList.add('text-[#940000]', 'border-[#940000]', 'border-b-4');
+                tab.classList.remove('text-gray-400');
+
+                // Update content visibility
+                contents.forEach(content => {
+                    if (content.getAttribute('data-tab-content') === target) {
+                        content.classList.remove('hidden');
+                    } else {
+                        content.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    });
+</script>
 @endsection
