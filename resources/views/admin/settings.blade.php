@@ -8,7 +8,7 @@
     <!-- Settings Categories -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- General Settings -->
-        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow cursor-pointer">
+        <a href="{{ route('admin.settings.general') }}" class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow cursor-pointer block">
             <div class="flex items-center space-x-4 mb-4">
                 <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center">
                     <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -25,10 +25,10 @@
                 <span class="text-gray-600">12 configurations</span>
                 <span class="text-[#940000] font-medium">Configure →</span>
             </div>
-        </div>
+        </a>
 
         <!-- Security Settings -->
-        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow cursor-pointer">
+        <a href="{{ route('admin.settings.security') }}" class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow cursor-pointer block">
             <div class="flex items-center space-x-4 mb-4">
                 <div class="w-12 h-12 rounded-lg bg-red-100 flex items-center justify-center">
                     <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -44,10 +44,10 @@
                 <span class="text-gray-600">8 configurations</span>
                 <span class="text-[#940000] font-medium">Configure →</span>
             </div>
-        </div>
+        </a>
 
         <!-- Email Settings -->
-        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow cursor-pointer">
+        <a href="{{ route('admin.settings.email') }}" class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow cursor-pointer block">
             <div class="flex items-center space-x-4 mb-4">
                 <div class="w-12 h-12 rounded-lg bg-green-100 flex items-center justify-center">
                     <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -63,10 +63,10 @@
                 <span class="text-gray-600">6 configurations</span>
                 <span class="text-[#940000] font-medium">Configure →</span>
             </div>
-        </div>
+        </a>
 
         <!-- Integration Settings -->
-        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow cursor-pointer">
+        <a href="{{ route('admin.settings.integrations') }}" class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow cursor-pointer block">
             <div class="flex items-center space-x-4 mb-4">
                 <div class="w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center">
                     <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -82,10 +82,10 @@
                 <span class="text-gray-600">4 active</span>
                 <span class="text-[#940000] font-medium">Configure →</span>
             </div>
-        </div>
+        </a>
 
         <!-- Notification Settings -->
-        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow cursor-pointer">
+        <a href="{{ route('admin.settings.notifications') }}" class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow cursor-pointer block">
             <div class="flex items-center space-x-4 mb-4">
                 <div class="w-12 h-12 rounded-lg bg-yellow-100 flex items-center justify-center">
                     <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -101,15 +101,15 @@
                 <span class="text-gray-600">10 rules</span>
                 <span class="text-[#940000] font-medium">Configure →</span>
             </div>
-        </div>
+        </a>
 
         <!-- System Settings -->
-        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow cursor-pointer">
+        <a href="{{ route('admin.settings.system') }}" class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow cursor-pointer block">
             <div class="flex items-center space-x-4 mb-4">
                 <div class="w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center">
                     <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
-                    </svg>
+                </svg>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold text-gray-900">System</h3>
@@ -120,9 +120,9 @@
                 <span class="text-gray-600">5 configurations</span>
                 <span class="text-[#940000] font-medium">Configure →</span>
             </div>
+        </a>
         </div>
-    </div>
-
+        
     <!-- Quick Settings Overview -->
     <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
         <h2 class="text-xl font-bold text-gray-800 mb-4">System Configuration Overview</h2>

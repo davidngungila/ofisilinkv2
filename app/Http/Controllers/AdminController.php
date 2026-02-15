@@ -55,5 +55,35 @@ class AdminController extends Controller
     {
         return view('admin.bulk', ['title' => 'Bulk Operations']);
     }
+    
+    public function settingsGeneral()
+    {
+        return view('admin.settings.general', ['title' => 'General Settings']);
+    }
+    
+    public function settingsSecurity()
+    {
+        return view('admin.settings.security', ['title' => 'Security Settings']);
+    }
+    
+    public function settingsEmail()
+    {
+        return view('admin.settings.email', ['title' => 'Email Settings']);
+    }
+    
+    public function settingsIntegrations()
+    {
+        return view('admin.settings.integrations', ['title' => 'Integration Settings']);
+    }
+    
+    public function settingsNotifications()
+    {
+        return view('admin.settings.notifications', ['title' => 'Notification Settings']);
+    }
+    
+    public function settingsSystem()
+    {
+        return view('admin.settings.system', ['title' => 'System Settings']);
+    }
 }
 

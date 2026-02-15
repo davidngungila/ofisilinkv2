@@ -39,7 +39,7 @@
             <div class="flex items-center justify-between">
                 <div>
                     <p class="text-sm text-gray-600 mb-1">Total Outstanding</p>
-                    <p class="text-2xl font-bold text-orange-600">₦485,000</p>
+                    <p class="text-2xl font-bold text-orange-600">TSh485,000</p>
                 </div>
                 <div class="w-12 h-12 rounded-lg bg-orange-100 flex items-center justify-center">
                     <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -67,10 +67,10 @@
     <!-- Tabs -->
     <div class="bg-white rounded-lg shadow-sm border border-gray-200">
         <div class="border-b border-gray-200">
-            <nav class="flex -mb-px">
-                <button class="px-6 py-4 text-sm font-medium text-[#940000] border-b-2 border-[#940000]">Active Imprest</button>
-                <button class="px-6 py-4 text-sm font-medium text-gray-600 hover:text-gray-800">Pending Retirement</button>
-                <button class="px-6 py-4 text-sm font-medium text-gray-600 hover:text-gray-800">Retired</button>
+            <nav class="flex -mb-px" role="tablist">
+                <button type="button" role="tab" data-tab="active" class="px-6 py-4 text-sm font-medium text-[#940000] border-b-2 border-[#940000]">Active Imprest</button>
+                <button type="button" role="tab" data-tab="pending" class="px-6 py-4 text-sm font-medium text-gray-600 hover:text-gray-800">Pending Retirement</button>
+                <button type="button" role="tab" data-tab="retired" class="px-6 py-4 text-sm font-medium text-gray-600 hover:text-gray-800">Retired</button>
             </nav>
         </div>
 
@@ -163,7 +163,7 @@
                             <span class="text-sm text-gray-600">Finance</span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <span class="text-sm font-semibold text-gray-900">₦50,000</span>
+                            <span class="text-sm font-semibold text-gray-900">TSh50,000</span>
                         </td>
                         <td class="px-6 py-4">
                             <span class="text-sm text-gray-600">Field operations and travel expenses</span>
@@ -198,7 +198,7 @@
                             <span class="text-sm text-gray-600">HR</span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <span class="text-sm font-semibold text-gray-900">₦75,000</span>
+                            <span class="text-sm font-semibold text-gray-900">TSh75,000</span>
                         </td>
                         <td class="px-6 py-4">
                             <span class="text-sm text-gray-600">Training and workshop expenses</span>
@@ -233,7 +233,7 @@
                             <span class="text-sm text-gray-600">IT</span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <span class="text-sm font-semibold text-gray-900">₦30,000</span>
+                            <span class="text-sm font-semibold text-gray-900">TSh30,000</span>
                         </td>
                         <td class="px-6 py-4">
                             <span class="text-sm text-gray-600">Equipment purchase and maintenance</span>
@@ -268,7 +268,7 @@
                             <span class="text-sm text-gray-600">Admin</span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <span class="text-sm font-semibold text-gray-900">₦100,000</span>
+                            <span class="text-sm font-semibold text-gray-900">TSh100,000</span>
                         </td>
                         <td class="px-6 py-4">
                             <span class="text-sm text-gray-600">Conference and event expenses</span>

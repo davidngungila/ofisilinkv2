@@ -39,7 +39,7 @@
             <div class="flex items-center justify-between">
                 <div>
                     <p class="text-sm text-gray-600 mb-1">Total Amount</p>
-                    <p class="text-2xl font-bold text-green-600">₦245,000</p>
+                    <p class="text-2xl font-bold text-green-600">TSh245,000</p>
                 </div>
                 <div class="w-12 h-12 rounded-lg bg-green-100 flex items-center justify-center">
                     <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -154,7 +154,7 @@
                             <span class="text-sm text-gray-600">Finance</span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <span class="text-sm font-semibold text-gray-900">₦15,000</span>
+                            <span class="text-sm font-semibold text-gray-900">TSh15,000</span>
                         </td>
                         <td class="px-6 py-4">
                             <span class="text-sm text-gray-600">Office supplies and stationery</span>
@@ -186,7 +186,7 @@
                             <span class="text-sm text-gray-600">HR</span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <span class="text-sm font-semibold text-gray-900">₦8,500</span>
+                            <span class="text-sm font-semibold text-gray-900">TSh8,500</span>
                         </td>
                         <td class="px-6 py-4">
                             <span class="text-sm text-gray-600">Team lunch meeting</span>
@@ -218,7 +218,7 @@
                             <span class="text-sm text-gray-600">IT</span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <span class="text-sm font-semibold text-gray-900">₦12,000</span>
+                            <span class="text-sm font-semibold text-gray-900">TSh12,000</span>
                         </td>
                         <td class="px-6 py-4">
                             <span class="text-sm text-gray-600">Software license renewal</span>
@@ -250,7 +250,7 @@
                             <span class="text-sm text-gray-600">Admin</span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <span class="text-sm font-semibold text-gray-900">₦5,000</span>
+                            <span class="text-sm font-semibold text-gray-900">TSh5,000</span>
                         </td>
                         <td class="px-6 py-4">
                             <span class="text-sm text-gray-600">Transportation expenses</span>

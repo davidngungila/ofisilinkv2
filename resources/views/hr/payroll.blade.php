@@ -25,7 +25,7 @@
             <div class="flex items-center justify-between">
                 <div>
                     <p class="text-sm text-gray-600 mb-1">Monthly Payroll</p>
-                    <p class="text-2xl font-bold text-green-600">₦12.5M</p>
+                    <p class="text-2xl font-bold text-green-600">TSh12.5M</p>
                 </div>
                 <div class="w-12 h-12 rounded-lg bg-green-100 flex items-center justify-center">
                     <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -158,16 +158,16 @@
                             <span class="text-sm text-gray-600">Finance</span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <span class="text-sm font-semibold text-gray-900">₦150,000</span>
+                            <span class="text-sm font-semibold text-gray-900">TSh150,000</span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <span class="text-sm text-green-600">₦25,000</span>
+                            <span class="text-sm text-green-600">TSh25,000</span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <span class="text-sm text-red-600">₦15,000</span>
+                            <span class="text-sm text-red-600">TSh15,000</span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <span class="text-sm font-bold text-[#940000]">₦160,000</span>
+                            <span class="text-sm font-bold text-[#940000]">TSh160,000</span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
                             <span class="px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">Processed</span>
@@ -193,16 +193,16 @@
                             <span class="text-sm text-gray-600">HR</span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <span class="text-sm font-semibold text-gray-900">₦120,000</span>
+                            <span class="text-sm font-semibold text-gray-900">TSh120,000</span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <span class="text-sm text-green-600">₦20,000</span>
+                            <span class="text-sm text-green-600">TSh20,000</span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <span class="text-sm text-red-600">₦12,000</span>
+                            <span class="text-sm text-red-600">TSh12,000</span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <span class="text-sm font-bold text-[#940000]">₦128,000</span>
+                            <span class="text-sm font-bold text-[#940000]">TSh128,000</span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
                             <span class="px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">Pending</span>

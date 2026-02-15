@@ -38,17 +38,17 @@
 
         <!-- Tabs -->
         <div class="border-b border-gray-200">
-            <nav class="flex -mb-px">
-                <button class="px-6 py-4 text-sm font-medium text-[#940000] border-b-2 border-[#940000]">Personal Information</button>
-                <button class="px-6 py-4 text-sm font-medium text-gray-600 hover:text-gray-800">Contact Details</button>
-                <button class="px-6 py-4 text-sm font-medium text-gray-600 hover:text-gray-800">Employment Details</button>
-                <button class="px-6 py-4 text-sm font-medium text-gray-600 hover:text-gray-800">Emergency Contacts</button>
-                <button class="px-6 py-4 text-sm font-medium text-gray-600 hover:text-gray-800">Documents</button>
+            <nav class="flex -mb-px" role="tablist">
+                <button type="button" role="tab" data-tab="personal" class="px-6 py-4 text-sm font-medium text-[#940000] border-b-2 border-[#940000]">Personal Information</button>
+                <button type="button" role="tab" data-tab="contact" class="px-6 py-4 text-sm font-medium text-gray-600 hover:text-gray-800">Contact Details</button>
+                <button type="button" role="tab" data-tab="employment" class="px-6 py-4 text-sm font-medium text-gray-600 hover:text-gray-800">Employment Details</button>
+                <button type="button" role="tab" data-tab="emergency" class="px-6 py-4 text-sm font-medium text-gray-600 hover:text-gray-800">Emergency Contacts</button>
+                <button type="button" role="tab" data-tab="documents" class="px-6 py-4 text-sm font-medium text-gray-600 hover:text-gray-800">Documents</button>
             </nav>
         </div>
 
         <!-- Personal Information Content -->
-        <div class="p-6">
+        <div class="p-6" data-tab-content="personal">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
@@ -64,7 +64,7 @@
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Nationality</label>
-                    <p class="text-gray-900 font-semibold">Nigerian</p>
+                    <p class="text-gray-900 font-semibold">Tanzanian</p>
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Marital Status</label>
@@ -81,6 +81,92 @@
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Blood Group</label>
                     <p class="text-gray-900 font-semibold">O+</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Details Content -->
+        <div class="p-6 hidden" data-tab-content="contact">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                    <p class="text-gray-900 font-semibold">john.doe@company.com</p>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                    <p class="text-gray-900 font-semibold">+234 123 456 7890</p>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Alternate Phone</label>
+                    <p class="text-gray-900 font-semibold">+234 987 654 3210</p>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Address</label>
+                    <p class="text-gray-900 font-semibold">123 Main Street, Lagos</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Employment Details Content -->
+        <div class="p-6 hidden" data-tab-content="employment">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Employee ID</label>
+                    <p class="text-gray-900 font-semibold">EMP-001</p>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Department</label>
+                    <p class="text-gray-900 font-semibold">Finance</p>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Position</label>
+                    <p class="text-gray-900 font-semibold">Senior Accountant</p>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Date of Joining</label>
+                    <p class="text-gray-900 font-semibold">January 15, 2020</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Emergency Contacts Content -->
+        <div class="p-6 hidden" data-tab-content="emergency">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Emergency Contact Name</label>
+                    <p class="text-gray-900 font-semibold">Jane Doe</p>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Relationship</label>
+                    <p class="text-gray-900 font-semibold">Spouse</p>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Emergency Phone</label>
+                    <p class="text-gray-900 font-semibold">+234 111 222 3333</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Documents Content -->
+        <div class="p-6 hidden" data-tab-content="documents">
+            <div class="space-y-4">
+                <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                    <div>
+                        <p class="text-sm font-semibold text-gray-900">Resume</p>
+                        <p class="text-xs text-gray-600">Uploaded on Jan 15, 2020</p>
+                    </div>
+                    <button class="px-3 py-1.5 text-[#940000] border border-[#940000] rounded text-sm font-medium hover:bg-[#940000] hover:text-white transition-colors">
+                        Download
+                    </button>
+                </div>
+                <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                    <div>
+                        <p class="text-sm font-semibold text-gray-900">ID Card Copy</p>
+                        <p class="text-xs text-gray-600">Uploaded on Jan 15, 2020</p>
+                    </div>
+                    <button class="px-3 py-1.5 text-[#940000] border border-[#940000] rounded text-sm font-medium hover:bg-[#940000] hover:text-white transition-colors">
+                        Download
+                    </button>
                 </div>
             </div>
         </div>

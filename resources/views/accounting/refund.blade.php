@@ -39,7 +39,7 @@
             <div class="flex items-center justify-between">
                 <div>
                     <p class="text-sm text-gray-600 mb-1">Total Amount</p>
-                    <p class="text-2xl font-bold text-green-600">₦125,500</p>
+                    <p class="text-2xl font-bold text-green-600">TSh125,500</p>
                 </div>
                 <div class="w-12 h-12 rounded-lg bg-green-100 flex items-center justify-center">
                     <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -154,7 +154,7 @@
                             <span class="text-sm text-gray-600">Overpayment</span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <span class="text-sm font-semibold text-gray-900">₦5,000</span>
+                            <span class="text-sm font-semibold text-gray-900">TSh5,000</span>
                         </td>
                         <td class="px-6 py-4">
                             <span class="text-sm text-gray-600">Duplicate payment made in error</span>
@@ -186,7 +186,7 @@
                             <span class="text-sm text-gray-600">Cancellation</span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <span class="text-sm font-semibold text-gray-900">₦12,500</span>
+                            <span class="text-sm font-semibold text-gray-900">TSh12,500</span>
                         </td>
                         <td class="px-6 py-4">
                             <span class="text-sm text-gray-600">Service cancelled before delivery</span>
@@ -218,7 +218,7 @@
                             <span class="text-sm text-gray-600">Error Correction</span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <span class="text-sm font-semibold text-gray-900">₦3,000</span>
+                            <span class="text-sm font-semibold text-gray-900">TSh3,000</span>
                         </td>
                         <td class="px-6 py-4">
                             <span class="text-sm text-gray-600">Incorrect amount charged</span>
@@ -250,7 +250,7 @@
                             <span class="text-sm text-gray-600">Other</span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <span class="text-sm font-semibold text-gray-900">₦8,000</span>
+                            <span class="text-sm font-semibold text-gray-900">TSh8,000</span>
                         </td>
                         <td class="px-6 py-4">
                             <span class="text-sm text-gray-600">Policy adjustment refund</span>

@@ -67,10 +67,10 @@
     <!-- Tabs -->
     <div class="bg-white rounded-lg shadow-sm border border-gray-200">
         <div class="border-b border-gray-200">
-            <nav class="flex -mb-px">
-                <button class="px-6 py-4 text-sm font-medium text-[#940000] border-b-2 border-[#940000]">Users</button>
-                <button class="px-6 py-4 text-sm font-medium text-gray-600 hover:text-gray-800">Roles</button>
-                <button class="px-6 py-4 text-sm font-medium text-gray-600 hover:text-gray-800">Permissions</button>
+            <nav class="flex -mb-px" role="tablist">
+                <button type="button" role="tab" data-tab="users" class="px-6 py-4 text-sm font-medium text-[#940000] border-b-2 border-[#940000]">Users</button>
+                <button type="button" role="tab" data-tab="roles" class="px-6 py-4 text-sm font-medium text-gray-600 hover:text-gray-800">Roles</button>
+                <button type="button" role="tab" data-tab="permissions" class="px-6 py-4 text-sm font-medium text-gray-600 hover:text-gray-800">Permissions</button>
             </nav>
         </div>
 

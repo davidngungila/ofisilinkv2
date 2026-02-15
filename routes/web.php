@@ -98,6 +98,14 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/permissions', [AdminController::class, 'permissions'])->name('permissions');
     Route::get('/departments', [AdminController::class, 'departments'])->name('departments');
     Route::get('/settings', [AdminController::class, 'settings'])->name('settings');
+    Route::prefix('settings')->name('settings.')->group(function () {
+        Route::get('/general', [AdminController::class, 'settingsGeneral'])->name('general');
+        Route::get('/security', [AdminController::class, 'settingsSecurity'])->name('security');
+        Route::get('/email', [AdminController::class, 'settingsEmail'])->name('email');
+        Route::get('/integrations', [AdminController::class, 'settingsIntegrations'])->name('integrations');
+        Route::get('/notifications', [AdminController::class, 'settingsNotifications'])->name('notifications');
+        Route::get('/system', [AdminController::class, 'settingsSystem'])->name('system');
+    });
     Route::get('/activity', [AdminController::class, 'activity'])->name('activity');
     Route::get('/backup', [AdminController::class, 'backup'])->name('backup');
     Route::get('/health', [AdminController::class, 'health'])->name('health');
