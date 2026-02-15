@@ -1,0 +1,110 @@
+@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Gothic A1', 'Century Gothic', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+    --color-primary: #940000;
+    --color-primary-dark: #7a0000;
+    --color-primary-light: #b30000;
+}
+
+* {
+    font-family: 'Gothic A1', 'Century Gothic', sans-serif;
+    font-weight: 400;
+}
+
+body {
+    background-color: #ffffff;
+    color: #1f2937;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background: linear-gradient(180deg, #940000 0%, #7a0000 100%);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.sidebar-item {
+    transition: all 0.2s ease;
+    border-radius: 0.5rem;
+}
+
+.sidebar-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-item.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.sidebar-submenu.open {
+    max-height: 1000px;
+}
+
+/* Card Styles */
+.module-card {
+    transition: all 0.3s ease;
+    border: 1px solid #e5e7eb;
+}
+
+.module-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(148, 0, 0, 0.1);
+    border-color: #940000;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #940000;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #7a0000;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(148, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+    
+    .sidebar.open {
+        transform: translateX(0);
+    }
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #940000;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7a0000;
+}
