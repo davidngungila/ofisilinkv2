@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 class HRController extends Controller
 {
-    public function personalParticulars()
+    public function employees()
     {
-        return view('hr.personal-particulars', ['title' => 'Personal Particulars']);
+        return view('hr.employees', ['title' => 'Employee Registration & Profiles']);
     }
     
     public function leave()
@@ -18,7 +18,7 @@ class HRController extends Controller
     
     public function permission()
     {
-        return view('hr.permission', ['title' => 'Permission Management']);
+        return view('hr.permission', ['title' => 'Permission Requests']);
     }
     
     public function sickSheet()
@@ -49,6 +49,16 @@ class HRController extends Controller
     public function attendance()
     {
         return view('hr.attendance', ['title' => 'Attendance Tracking']);
+    }
+    
+    public function documents()
+    {
+        return view('hr.documents', ['title' => 'Document Management']);
+    }
+    
+    public function communication()
+    {
+        return view('hr.communication', ['title' => 'Bulk SMS & Email']);
     }
 }
 

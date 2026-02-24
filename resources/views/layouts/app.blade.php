@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'Office Management - Office Management System')</title>
+    <title>@yield('title', 'OfisiLink - Office Management System')</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-white">
@@ -12,12 +12,9 @@
         <!-- Sidebar -->
         <aside id="sidebar" class="sidebar w-64 fixed lg:static h-full z-50 lg:z-auto transform lg:transform-none transition-transform duration-300 ease-in-out">
             <div class="flex flex-col h-full">
-                <!-- Logo -->
-                <div class="p-6 border-b border-white/10">
+                <div class="p-6 border-b border-gray-200">
                     <div class="flex items-center justify-center">
-                        <div class="bg-white rounded-lg p-2">
-                            <img src="{{ asset('office_link_logo.png') }}" alt="Office Management" class="h-10 w-auto">
-                        </div>
+                        <img src="{{ asset('office_link_logo.png') }}" alt="Office Link" class="h-14 sm:h-16 lg:h-18 w-auto" />
                     </div>
                 </div>
                 
@@ -46,8 +43,15 @@
                         </a>
                         <div id="accounting-menu" class="sidebar-submenu ml-4 mt-1">
                             <a href="{{ route('accounting.petty-cash') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Petty Cash Management</a>
-                            <a href="{{ route('accounting.imprest') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Imprest Management</a>
-                            <a href="{{ route('accounting.refund') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Refund Management</a>
+                            <a href="{{ route('accounting.imprest') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Imprest Request & Retirement</a>
+                            <a href="{{ route('accounting.chart-of-accounts') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Chart of Accounts</a>
+                            <a href="{{ route('accounting.journal') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Journal Entries & Ledger</a>
+                            <a href="{{ route('accounting.payable-receivable') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Accounts Payable & Receivable</a>
+                            <a href="{{ route('accounting.budget') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Budget Planning & Forecasting</a>
+                            <a href="{{ route('accounting.reports') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Financial Reports</a>
+                            <a href="{{ route('accounting.cash-flow') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Cash Flow & Reconciliation</a>
+                            <a href="{{ route('accounting.tax') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Tax & PAYE Management</a>
+                            <a href="{{ route('accounting.assets') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Fixed Assets & Depreciation</a>
                         </div>
                     </div>
                     
@@ -65,9 +69,16 @@
                             </svg>
                         </a>
                         <div id="file-menu" class="sidebar-submenu ml-4 mt-1">
-                            <a href="{{ route('files.digital') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Digital File</a>
-                            <a href="{{ route('files.physical') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Physical Rack</a>
-                            <a href="{{ route('files.my-files') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">My Files</a>
+                            <a href="{{ route('files.digital') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Digital File System</a>
+                            <a href="{{ route('files.physical') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Physical Rack Management</a>
+                            <a href="{{ route('files.access-request') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Access Request Workflow</a>
+                            <a href="{{ route('files.assignments') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">User-Specific Assignments</a>
+                            <a href="{{ route('files.search') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Advanced Search & Filtering</a>
+                            <a href="{{ route('files.version') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Version Control & History</a>
+                            <a href="{{ route('files.movement') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">File Movement Tracking</a>
+                            <a href="{{ route('files.audit') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Complete Audit Trail</a>
+                            <a href="{{ route('files.bulk') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Bulk Operations</a>
+                            <a href="{{ route('files.confidentiality') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Confidentiality Levels</a>
                         </div>
                     </div>
                     
@@ -112,15 +123,17 @@
                             </svg>
                         </a>
                         <div id="hr-menu" class="sidebar-submenu ml-4 mt-1">
-                            <a href="{{ route('hr.personal-particulars') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Personal Particulars</a>
+                            <a href="{{ route('hr.employees') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Employee Registration & Profiles</a>
                             <a href="{{ route('hr.leave') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Leave Management</a>
-                            <a href="{{ route('hr.permission') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Permission Management</a>
+                            <a href="{{ route('hr.permission') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Permission Requests</a>
                             <a href="{{ route('hr.sick-sheet') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Sick Sheet Management</a>
                             <a href="{{ route('hr.performance') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Performance Assessments</a>
                             <a href="{{ route('hr.payroll') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Payroll Processing</a>
                             <a href="{{ route('hr.recruitment') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Recruitment Management</a>
                             <a href="{{ route('hr.departments') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Department & Position Management</a>
                             <a href="{{ route('hr.attendance') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Attendance Tracking</a>
+                            <a href="{{ route('hr.documents') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Document Management</a>
+                            <a href="{{ route('hr.communication') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg text-sm">Bulk SMS & Email</a>
                         </div>
                     </div>
                     
@@ -231,6 +244,7 @@
                         </div>
                     </div>
                 </nav>
+                
             </div>
         </aside>
         
@@ -240,191 +254,52 @@
         <!-- Main Content -->
         <div class="flex-1 flex flex-col overflow-hidden">
             <!-- Top Header -->
-            <header class="bg-white border-b border-gray-200 px-4 lg:px-6 py-4">
-                <div class="flex items-center justify-between">
-                    <!-- Left Side: Logo/Toggle and Title -->
-                    <div class="flex items-center space-x-4">
-                        <button id="sidebar-toggle" class="lg:hidden text-gray-600 hover:text-[#940000] transition-colors">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                            </svg>
-                        </button>
-                        <div class="hidden md:flex flex-col">
-                            <h1 class="text-lg lg:text-xl font-extrabold text-gray-900 leading-tight">Office Management System</h1>
-                            <p class="text-xs font-extrabold text-gray-700 hidden lg:block">Comprehensive Office Solution</p>
-                        </div>
+            <header class="bg-white border-b border-gray-200 px-4 lg:px-6 py-4 flex items-center justify-between">
+                <div class="flex items-center min-w-0">
+                    <button id="sidebar-toggle" class="lg:hidden mr-4 text-gray-600 hover:text-[#940000]">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                    <div class="flex items-center gap-3 min-w-0">
+                        <h1 class="text-lg sm:text-xl lg:text-2xl font-bold text-gray-800 truncate">Office Management System</h1>
                     </div>
-                    
-                    <!-- Right Side: Date/Time, Notifications, Profile -->
-                    <div class="flex items-center space-x-6">
-                        <!-- Date and Time -->
-                        <div class="hidden lg:flex items-center space-x-4 px-4 py-2 bg-gray-50 rounded-lg border border-gray-200">
-                            <div class="flex items-center space-x-2">
-                                <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                                </svg>
-                                <span id="live-date" class="text-sm font-semibold text-gray-700"></span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button class="relative text-gray-600 hover:text-[#940000]">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                        </svg>
+                        <span class="absolute top-0 right-0 block h-2 w-2 rounded-full bg-[#940000] ring-2 ring-white"></span>
+                    </button>
+                    <div class="relative group">
+                        <button id="profile-menu-button" type="button" class="flex items-center gap-3">
+                            <div class="hidden sm:block text-right leading-tight">
+                                <div class="text-sm font-medium text-gray-800">User Name</div>
+                                <div class="text-xs text-gray-500">Administrator</div>
                             </div>
-                            <div class="w-px h-5 bg-gray-300"></div>
-                            <div class="flex items-center space-x-2">
-                                <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                                <span id="live-time" class="text-sm font-semibold text-gray-700"></span>
+                            <div class="w-12 h-12 rounded-full bg-[#940000] flex items-center justify-center text-white font-semibold shrink-0">
+                                U
                             </div>
-                        </div>
-                        
-                        <!-- Mobile Date/Time -->
-                        <div class="lg:hidden flex items-center space-x-2 px-3 py-1.5 bg-gray-50 rounded-lg border border-gray-200">
-                            <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                            <span id="live-time-mobile" class="text-sm font-semibold text-gray-700"></span>
-                        </div>
-                        
-                        <div class="flex items-center space-x-4">
-                    <!-- Notifications Dropdown -->
-                    <div class="relative group" id="notification-dropdown">
-                        <button id="notification-btn" class="relative text-gray-600 hover:text-[#940000] transition-colors">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
-                            </svg>
-                            <span class="absolute top-0 right-0 block h-2 w-2 rounded-full bg-[#940000] ring-2 ring-white"></span>
                         </button>
-                        
-                        <!-- Notifications Dropdown Menu -->
-                        <div class="absolute right-0 mt-2 w-[calc(100vw-2rem)] md:w-96 max-w-md bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 max-h-[500px] overflow-y-auto">
-                            <div class="p-3 md:p-4 border-b border-gray-200 bg-gray-50">
-                                <div class="flex items-center justify-between">
-                                    <h3 class="text-sm md:text-base font-bold text-gray-800">Notifications</h3>
-                                    <span class="text-xs text-gray-500">3 new</span>
-                                </div>
-                            </div>
-                            <div class="py-1 md:py-2">
-                                <!-- Notification Items -->
-                                <a href="#" class="block px-3 md:px-4 py-3 md:py-4 hover:bg-gray-50 border-b border-gray-100 transition-colors">
-                                    <div class="flex items-start space-x-3">
-                                        <div class="flex-shrink-0">
-                                            <div class="w-3 h-3 rounded-full bg-[#940000] mt-1.5"></div>
-                                        </div>
-                                        <div class="flex-1 min-w-0">
-                                            <p class="text-sm font-semibold text-gray-900">New task assigned</p>
-                                            <p class="text-xs text-gray-600 mt-1 leading-relaxed">You have been assigned a new task in the project management module. Please review and update the status.</p>
-                                            <p class="text-xs text-gray-400 mt-2">2 minutes ago</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="#" class="block px-3 md:px-4 py-3 md:py-4 hover:bg-gray-50 border-b border-gray-100 transition-colors">
-                                    <div class="flex items-start space-x-3">
-                                        <div class="flex-shrink-0">
-                                            <div class="w-3 h-3 rounded-full bg-[#940000] mt-1.5"></div>
-                                        </div>
-                                        <div class="flex-1 min-w-0">
-                                            <p class="text-sm font-semibold text-gray-900">System update available</p>
-                                            <p class="text-xs text-gray-600 mt-1 leading-relaxed">A new system update is ready to install. This update includes security patches and performance improvements.</p>
-                                            <p class="text-xs text-gray-400 mt-2">1 hour ago</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="#" class="block px-3 md:px-4 py-3 md:py-4 hover:bg-gray-50 border-b border-gray-100 transition-colors">
-                                    <div class="flex items-start space-x-3">
-                                        <div class="flex-shrink-0">
-                                            <div class="w-3 h-3 rounded-full bg-gray-300 mt-1.5"></div>
-                                        </div>
-                                        <div class="flex-1 min-w-0">
-                                            <p class="text-sm font-semibold text-gray-900">Report generated</p>
-                                            <p class="text-xs text-gray-600 mt-1 leading-relaxed">Your monthly financial report has been generated successfully. You can download it from the reports section.</p>
-                                            <p class="text-xs text-gray-400 mt-2">3 hours ago</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="#" class="block px-3 md:px-4 py-3 md:py-4 hover:bg-gray-50 border-b border-gray-100 transition-colors">
-                                    <div class="flex items-start space-x-3">
-                                        <div class="flex-shrink-0">
-                                            <div class="w-3 h-3 rounded-full bg-gray-300 mt-1.5"></div>
-                                        </div>
-                                        <div class="flex-1 min-w-0">
-                                            <p class="text-sm font-semibold text-gray-900">Leave request approved</p>
-                                            <p class="text-xs text-gray-600 mt-1 leading-relaxed">Your leave request for next week has been approved by your manager.</p>
-                                            <p class="text-xs text-gray-400 mt-2">5 hours ago</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="p-3 md:p-4 border-t border-gray-200 bg-gray-50">
-                                <a href="#" class="block text-center text-xs md:text-sm text-[#940000] hover:text-[#7a0000] font-semibold transition-colors">View all notifications</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- User Profile Dropdown -->
-                    <div class="relative group" id="profile-dropdown">
-                        <button class="flex items-center space-x-3 focus:outline-none px-3 py-2 rounded-lg border-2 border-transparent hover:border-[#940000] transition-all">
-                            <div class="w-10 h-10 rounded-full bg-[#940000] flex items-center justify-center text-white font-semibold hover:bg-[#7a0000] transition-colors border-2 border-[#940000]">
-                                {{ strtoupper(substr(auth()->check() ? auth()->user()->name : 'U', 0, 1)) }}
-                            </div>
-                            <div class="hidden lg:block text-left">
-                                <p class="text-sm font-medium text-gray-800">{{ auth()->check() ? auth()->user()->name : 'User Name' }}</p>
-                                <p class="text-xs text-gray-500">{{ auth()->check() ? auth()->user()->email : 'Administrator' }}</p>
-                            </div>
-                            <svg class="w-4 h-4 text-gray-600 hidden lg:block group-hover:text-[#940000] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        
-                        <!-- Dropdown Menu -->
-                        <div class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                            <div class="py-2">
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center">
-                                    <svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                    </svg>
-                                    Account Settings
-                                </a>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center">
-                                    <svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-                                    </svg>
-                                    Profile
-                                </a>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center">
-                                    <svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-                                    </svg>
-                                    Security
-                                </a>
-                                <div class="border-t border-gray-200 my-1"></div>
-                                <form method="POST" action="{{ route('logout') }}">
-                                    @csrf
-                                    <button type="submit" class="w-full text-left block px-4 py-2 text-sm text-red-600 hover:bg-red-50 flex items-center">
-                                        <svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
-                                        </svg>
-                                        Logout
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+
+                        <div id="profile-dropdown" class="hidden group-hover:block absolute right-0 mt-3 w-56 rounded-xl border border-gray-200 bg-white shadow-lg overflow-hidden z-50">
+                            <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50">Account Profile</a>
+                            <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50">Settings and Security</a>
+                            <div class="border-t border-gray-100"></div>
+                            <form method="POST" action="{{ Route::has('logout') ? route('logout') : url('/logout') }}">
+                                @csrf
+                                <button type="submit" class="w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-gray-50">Logout</button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </header>
             
-            <!-- Page Content with Footer -->
-            <div class="flex-1 overflow-y-auto flex flex-col">
-                <main class="flex-1 bg-gray-50 p-4 lg:p-6">
-                    @yield('content')
-                </main>
-                
-                <!-- Footer -->
-                <footer class="bg-white border-t border-gray-200 px-4 lg:px-6 py-4 mt-auto">
-                    <div class="flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 text-sm text-gray-600">
-                        <p>Version: 1.0.0 | © 2025 OfisiLink. All rights reserved. | Powered By EmCa Techonologies</p>
-                    </div>
-                </footer>
-            </div>
+            <!-- Page Content -->
+            <main class="flex-1 overflow-y-auto bg-gray-50 p-4 lg:p-6">
+                @yield('content')
+            </main>
         </div>
     </div>
 </body>

@@ -26,9 +26,33 @@ body {
 
 /* Sidebar Styles */
 .sidebar {
-    background: linear-gradient(180deg, #940000 0%, #7a0000 100%);
-    color: white;
+    background: #ffffff;
+    color: #1f2937;
     transition: all 0.3s ease;
+}
+
+.sidebar a {
+    color: inherit;
+}
+
+.sidebar .text-white {
+    color: inherit !important;
+}
+
+.sidebar .text-white\/80 {
+    color: #4b5563 !important;
+}
+
+.sidebar .hover\:text-white:hover {
+    color: #111827 !important;
+}
+
+.sidebar .hover\:bg-white\/10:hover {
+    background-color: rgba(148, 0, 0, 0.06) !important;
+}
+
+.sidebar .hover\:bg-white\/5:hover {
+    background-color: rgba(148, 0, 0, 0.04) !important;
 }
 
 .sidebar-item {
@@ -37,11 +61,15 @@ body {
 }
 
 .sidebar-item:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(148, 0, 0, 0.06);
 }
 
 .sidebar-item.active {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(148, 0, 0, 0.10);
+}
+
+.sidebar a:hover {
+    background-color: rgba(148, 0, 0, 0.06);
 }
 
 .sidebar-submenu {

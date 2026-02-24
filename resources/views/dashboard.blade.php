@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Dashboard - Office Management')
+@section('title', 'Dashboard - OfisiLink')
 @section('page-title', 'Dashboard')
 
 @section('content')
@@ -40,7 +40,7 @@
         </a>
         
         <!-- Task & Project Management -->
-        <div class="module-card bg-white rounded-lg shadow-sm p-6 border border-gray-200 hover:border-[#940000] transition-all relative group">
+        <a href="{{ route('tasks.create') }}" class="module-card bg-white rounded-lg shadow-sm p-6 border border-gray-200 hover:border-[#940000] transition-all">
             <div class="flex items-center justify-between mb-4">
                 <div class="w-12 h-12 rounded-lg bg-green-100 flex items-center justify-center">
                     <svg class="w-6 h-6 text-[#940000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -49,26 +49,11 @@
                 </div>
             </div>
             <h3 class="text-lg font-semibold text-gray-800 mb-2">Task & Project</h3>
-            <p class="text-sm text-gray-600 mb-3">Assign tasks, track progress, manage deadlines with automated reports.</p>
-            
-            <!-- Dropdown Menu -->
-            <div class="absolute top-full left-0 right-0 mt-2 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                <div class="py-2">
-                    <a href="{{ route('tasks.create') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#940000] hover:text-white transition-colors">
-                        Task Creation & Assignment
-                    </a>
-                    <a href="{{ route('tasks.progress') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#940000] hover:text-white transition-colors">
-                        Progress Updates & Status
-                    </a>
-                    <a href="{{ route('tasks.analytics') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#940000] hover:text-white transition-colors">
-                        Analytics & Reports
-                    </a>
-                </div>
-            </div>
-        </div>
+            <p class="text-sm text-gray-600">Assign tasks, track progress, manage deadlines with automated reports.</p>
+        </a>
         
         <!-- Human Resources -->
-        <a href="{{ route('hr.personal-particulars') }}" class="module-card bg-white rounded-lg shadow-sm p-6 border border-gray-200 hover:border-[#940000] transition-all">
+        <a href="{{ route('hr.employees') }}" class="module-card bg-white rounded-lg shadow-sm p-6 border border-gray-200 hover:border-[#940000] transition-all">
             <div class="flex items-center justify-between mb-4">
                 <div class="w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center">
                     <svg class="w-6 h-6 text-[#940000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">

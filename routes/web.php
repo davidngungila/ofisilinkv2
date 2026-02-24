@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AccountingController;
 use App\Http\Controllers\FileManagementController;
@@ -15,26 +14,32 @@ use App\Http\Controllers\AssetController;
 // Dashboard
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
-// Logout
-Route::post('/logout', function () {
-    Auth::logout();
-    request()->session()->invalidate();
-    request()->session()->regenerateToken();
-    return redirect('/');
-})->name('logout');
-
 // Accounting & Finance Routes
 Route::prefix('accounting')->name('accounting.')->group(function () {
     Route::get('/petty-cash', [AccountingController::class, 'pettyCash'])->name('petty-cash');
     Route::get('/imprest', [AccountingController::class, 'imprest'])->name('imprest');
-    Route::get('/refund', [AccountingController::class, 'refund'])->name('refund');
+    Route::get('/chart-of-accounts', [AccountingController::class, 'chartOfAccounts'])->name('chart-of-accounts');
+    Route::get('/journal', [AccountingController::class, 'journal'])->name('journal');
+    Route::get('/payable-receivable', [AccountingController::class, 'payableReceivable'])->name('payable-receivable');
+    Route::get('/budget', [AccountingController::class, 'budget'])->name('budget');
+    Route::get('/reports', [AccountingController::class, 'reports'])->name('reports');
+    Route::get('/cash-flow', [AccountingController::class, 'cashFlow'])->name('cash-flow');
+    Route::get('/tax', [AccountingController::class, 'tax'])->name('tax');
+    Route::get('/assets', [AccountingController::class, 'assets'])->name('assets');
 });
 
 // File Management Routes
 Route::prefix('files')->name('files.')->group(function () {
     Route::get('/digital', [FileManagementController::class, 'digital'])->name('digital');
     Route::get('/physical', [FileManagementController::class, 'physical'])->name('physical');
-    Route::get('/my-files', [FileManagementController::class, 'myFiles'])->name('my-files');
+    Route::get('/access-request', [FileManagementController::class, 'accessRequest'])->name('access-request');
+    Route::get('/assignments', [FileManagementController::class, 'assignments'])->name('assignments');
+    Route::get('/search', [FileManagementController::class, 'search'])->name('search');
+    Route::get('/version', [FileManagementController::class, 'version'])->name('version');
+    Route::get('/movement', [FileManagementController::class, 'movement'])->name('movement');
+    Route::get('/audit', [FileManagementController::class, 'audit'])->name('audit');
+    Route::get('/bulk', [FileManagementController::class, 'bulk'])->name('bulk');
+    Route::get('/confidentiality', [FileManagementController::class, 'confidentiality'])->name('confidentiality');
 });
 
 // Task & Project Management Routes
@@ -53,7 +58,7 @@ Route::prefix('tasks')->name('tasks.')->group(function () {
 
 // Human Resource Management Routes
 Route::prefix('hr')->name('hr.')->group(function () {
-    Route::get('/personal-particulars', [HRController::class, 'personalParticulars'])->name('personal-particulars');
+    Route::get('/employees', [HRController::class, 'employees'])->name('employees');
     Route::get('/leave', [HRController::class, 'leave'])->name('leave');
     Route::get('/permission', [HRController::class, 'permission'])->name('permission');
     Route::get('/sick-sheet', [HRController::class, 'sickSheet'])->name('sick-sheet');
@@ -62,6 +67,8 @@ Route::prefix('hr')->name('hr.')->group(function () {
     Route::get('/recruitment', [HRController::class, 'recruitment'])->name('recruitment');
     Route::get('/departments', [HRController::class, 'departments'])->name('departments');
     Route::get('/attendance', [HRController::class, 'attendance'])->name('attendance');
+    Route::get('/documents', [HRController::class, 'documents'])->name('documents');
+    Route::get('/communication', [HRController::class, 'communication'])->name('communication');
 });
 
 // Incident Management Routes
@@ -98,14 +105,6 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/permissions', [AdminController::class, 'permissions'])->name('permissions');
     Route::get('/departments', [AdminController::class, 'departments'])->name('departments');
     Route::get('/settings', [AdminController::class, 'settings'])->name('settings');
-    Route::prefix('settings')->name('settings.')->group(function () {
-        Route::get('/general', [AdminController::class, 'settingsGeneral'])->name('general');
-        Route::get('/security', [AdminController::class, 'settingsSecurity'])->name('security');
-        Route::get('/email', [AdminController::class, 'settingsEmail'])->name('email');
-        Route::get('/integrations', [AdminController::class, 'settingsIntegrations'])->name('integrations');
-        Route::get('/notifications', [AdminController::class, 'settingsNotifications'])->name('notifications');
-        Route::get('/system', [AdminController::class, 'settingsSystem'])->name('system');
-    });
     Route::get('/activity', [AdminController::class, 'activity'])->name('activity');
     Route::get('/backup', [AdminController::class, 'backup'])->name('backup');
     Route::get('/health', [AdminController::class, 'health'])->name('health');

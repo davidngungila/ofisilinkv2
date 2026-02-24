@@ -65,7 +65,7 @@ return [
     |
     */
 
-    'timezone' => env('APP_TIMEZONE', 'Africa/Dar_es_Salaam'),
+    'timezone' => 'UTC',
 
     /*
     |--------------------------------------------------------------------------
@@ -122,18 +122,5 @@ return [
         'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Application Currency
-    |--------------------------------------------------------------------------
-    |
-    | This value specifies the default currency for your application.
-    | The currency is set to "TZS" (Tanzanian Shilling) by default.
-    |
-    */
-
-    'currency' => env('APP_CURRENCY', 'TZS'),
-    'currency_symbol' => env('APP_CURRENCY_SYMBOL', 'TSh'),
 
 ];
